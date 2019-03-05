@@ -1,0 +1,213 @@
+#svgButtonBox { border: solid 1px rgb(200,200,200); margin-right: 13px; }
+.svgButton { text-align: right; border-bottom: solid 1px rgb(200,200,200); padding: 9px; font-size: 12px; letter-spacing: -.5px; cursor: pointer; background-color: rgb(240,244,247); color: rgb(44,96,142); }
+.svgButton:last-child { border-bottom: none; }
+.svgButton:hover { background-color: rgb(255,255,255); }
+.svgButtonOn { background-color: rgb(255,255,255); font-weight: 600; color: rgb(0,0,0); }
+
+
+#mapcontainer {position: relative; font-family: 'Open Sans', sans-serif; f }
+#svgBox { position: relative; width: 100%; font-family: 'Open Sans', sans-serif; padding: 0 0 1em 0; }
+
+.countyPath { fill: rgba(250,250,250,1); pointer-events: none; stroke: #bbb; }
+.bcBold { font-weight: 700; }
+
+#iaAnno { text-align: right; font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 13px; padding: 7px 0 15px 0; letter-spacing: -.5px; }
+
+.mapFixed {position: fixed !important; top: 40px;}
+
+svg {position: relative; z-index:10; display: block; 
+  top: 0px; left: 0px; margin: 0 auto;
+  font-family: "Open Sans", sans-serif; font-size: 10px;
+}
+
+div#wrapper {max-width: 698px;}
+
+div.chatterbox { 
+  position: relative;
+  padding: 2em 0; width: 90%; 
+  margin-left: 5%; margin-bottom: 100em; margin-top: 14em;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 1000;
+}
+
+div.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 2.5em;
+}
+
+g.townLabels {display: none; pointer-events: none;}
+
+
+g.townLabels#Portland-city {display: block; pointer-events: none;}
+g.townLabels#Caribou-city {display: block; pointer-events: none;}
+g.townLabels#Lewiston-city {display: block; pointer-events: none;}
+g.townLabels#Bangor-city {display: block; pointer-events: none;}
+
+#svgKey { width: 20%; position: absolute; left: 0px; top: 0px; padding: 10px 0; z-index: 100;}
+#svgKey h3 { margin: 0 0 0 0!important; padding: 0 0 4px 0; font-size: 18px; line-height: 18px; }
+
+.svgKeyBox { text-align: right; font-size: 14px; line-height: 14px; font-weight: 300; padding: 10px 15px 0px 0px; letter-spacing: -.5px;}
+
+#svgClick h3, .ui-widget h2 { font-family: 'Open Sans', sans-serif; font-weight: 700; color: rgb(0,0,0); font-size: 18px; text-align: left; border-top: solid 1px rgb(235,235,235); border-bottom: solid 1px rgb(235,235,235); margin: 0 0 5px 0; padding: 10px 15px 7px 0; text-transform: capitalize; }
+#svgClick { padding-top: 15px;  text-align: right; }
+#svgClickText { padding-right: 10px; }
+/*
+#svgClick span { display: block; padding: 2px 15px; font-size: 14px; font-weight: 300; letter-spacing: -.5px; }
+#svgClick span:last-child { padding-bottom: 15px; }
+*/
+
+div#chatter {position: absolute; top: 0px; width: 100%; z-index: 100; height: 4em; background-color: #fff; padding: 1em;}
+
+#mapBox h1 { font-family: 'Lusitana',serif; font-size: 36px; line-height: 36px; letter-spacing: -2px; margin: 0px; padding: 0px 0px 8px; }
+
+#mapBox p { font-family: 'Lusitana',serif; color: #505050; font-size: 18px; line-height: 24px; margin: 0px; padding: 0 0 20px 0; letter-spacing: -0.3px; }
+
+#svgMap { position: relative; padding-left: 10%; left: 0px; top: 0px; z-index: 0;}
+
+#svgChat { width: 346px; border-left: solid 1px rgb(235,235,235); padding: 10px 0; height: 580px; float: right; }
+
+#svgChatBloc { padding: 10px 0 0 20px; }
+
+circle.moose { fill: rgba(255,0,0,0.5); stroke-width: 0.5px; stroke: black; cursor: pointer; stroke-linejoin: round; stroke-linecap: round;}
+
+g#tiles path {
+  position: absolute;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+path.domain {display: none;}
+
+path.road {fill: none; stroke-width: 0.5px; stroke: #550000; }
+path.motorway, path.motorway_link {stroke: #b10026;}
+text.neighborhood_label {text-anchor: middle; text-transform: uppercase; font-style: italic; font-size: 12px; fill: #888; letter-spacing: 2px;}
+
+text.street_label {text-anchor: middle; font-size: 10px; }
+
+use.badge {fill: #fff; stroke: #222; stroke-width: 1px;}
+text.badge_label {font-size: 9px;}
+
+
+svg g.legend {font-size: 12px;}
+g.tick text {font-size: 10px;}
+
+.map {
+  position: relative;
+  overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+  will-change: transform;
+}
+
+.tile {
+  position: absolute;
+  width: 256px;
+  height: 256px;
+}
+
+.roads-layer {
+  fill: none;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.water-layer {
+  fill: none;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.water_boundary, .ocean_boundary, .riverbank_boundary { fill: none; stroke: #2A5953; stroke-width: 1px; }
+
+.water-layer.ocean {fill: #e5f5f9;}
+
+.roads-layer.major_road {
+  stroke: #555;
+}
+
+.roads-layer.minor_road {
+  stroke: #bbb;
+}
+
+.roads-layer.highway {
+  stroke: #800;
+  stroke-width: 1.5px;
+}
+
+.roads-layer.rail {
+  stroke: none;
+}
+
+
+
+/* ### SEARCH & TOOLTIP TABLES ### */
+table.tipster, table.clickster { width: 100%; border-collapse: collapse; padding: 0; border: none !important; margin-bottom: 0px !important;}
+td.tipLeft, td.clickLeft { font-size: 14px; font-weight: 300; text-align: left; padding-right: 10px; padding-bottom: 1px; vertical-align: top; }
+td.tipRight, td.clickRight { font-size: 14px; font-weight: 700; padding-bottom: 1px; vertical-align: top; text-align: right; }
+
+#svgClick h2 { font-family: 'Open Sans', sans-serif; font-weight: 600; color: rgb(70,70,70); font-size: 18px; line-height: 19px; text-transform: uppercase; letter-spacing: 1px; border-bottom: solid 1px rgb(235,235,235); margin: 0 0 5px 0; padding: 5px 0 7px 0; }
+#svgClick { padding-top: 10px; font-weight: 300; position: relative; background: rgba(255,255,255,0.8);}
+
+
+/* ### SEARCH ### */
+#mapSearch { margin: 0; width: auto; height: 26px; padding: 6px 0; border: solid 1px rgb(225,225,225); background: url(https://dev.mainetodaymedia.com/towntrac/V2/imgTrac/tracSearch.png) 172px 12px no-repeat rgb(255,255,255); }
+#mapSearch input { font-family: 'Open Sans', sans-serif; font-weight: 300; color: rgb(150,150,150); border: none; height: 15px; font-size: 12px; text-transform: uppercase; font-weight: 600; letter-spacing: 1px; padding-left: 10px; width: 155px; outline: none; }
+.ui-menu-item { font-family: 'Open Sans', sans-serif; font-weight: 300; }
+.ui-corner-all { border-radius: 0 !important; }
+.ui-menu-item { text-transform: uppercase; font-size: 13px;  }
+.ui-widget-content a { color: rgb(70,70,70); }
+a.ui-corner-all:hover, .ui-menu-item a:hover { background-color: rgb(198,40,40); color: rgb(255,255,255); }
+.ui-autocomplete { background-color: rgb(255,255,255); }
+
+
+
+/* ######## MOBILE ONLY ######## */
+
+@media screen and (min-width: 645px) and (max-width: 800px) {
+  text.neighborhood_label {font-size: 9px; }
+  text.street_label {font-size: 8px; }
+}
+
+@media screen and (max-width: 644px) {
+
+
+  .d3-tip {
+    line-height: 1;
+    min-width: 90px;
+    width: 120px;
+    max-width: 50%;
+    z-index: 100;
+    padding: 4px;
+    line-height: 10px;
+    border-radius: 2px;
+    font-size: 9px;
+  }
+
+
+  svg g.legend {font-size: 10px;}
+  g.tick text {font-size: 8px;}
+
+
+  /* ### COMPASS ### */
+  #d3ZoomBox { height: 29px; position: absolute; left: 10px; top: 10px; }
+  #d3ZoomPlus { width: 29px; height: 29px; background: url(https://dev.mainetodaymedia.com/devMap/img/touch.png) left top no-repeat; }
+  #d3ZoomMinus, #d3ZoomMid { display: none; }
+
+  text.neighborhood_label {text-anchor: middle; font-style: italic; font-size: 8px; letter-spacing: 10px;}
+  text.street_label {display: none; }
+  text.badge_label {font-size: 9px;}
+  
+	#mapBox { width: 100%; float: none; position: relative; height: auto; }
+	#svgBox { width: 100%; float: none; position: relative; height: auto; }
+	#svgKey { width: 100%; border-right: none; height: auto; position: relative;}
+	#svgMap { width: 100%; left: 0px; padding: 0; position: relative !important; }
+	#d3ZoomBox {margin-left: 0%;}
+	#svgButtonBox {height: 11em; border: none;}
+	.svgButton {width: 45%; padding: 2px 0.5em; float: left; height: 2.8em; border-left: solid 1px rgb(200,200,200);}
+	.svgButton:last-child { border-bottom: solid 1px rgb(200,200,200); }
+	svg { width: 100%; }
+}
+

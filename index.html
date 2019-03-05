@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- scripts and styles -->
+
+<script type='text/javascript' src='http://www.pressherald.com/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+
+
+<script src="http://specialprojects.pressherald.com/d3/d3.v5.min.js"></script>
+<script src="http://specialprojects.pressherald.com/d3/topojson.v1.min.js"></script>
+
+
+<link rel="stylesheet" href="http://dev.mainetodaymedia.com/CNM/me-towns_files/jquery.css" media="all" type="text/css">
+<link rel="stylesheet" href="https://specialprojects.pressherald.com/css/jqueryui-mod2.css">
+<script src="https://specialprojects.pressherald.com/js/jquery-ui.min.js"></script>
+ 
+<script src="commute.js"></script>
+<link href='styles.css' rel='stylesheet' type='text/css' />
+
+<style>   
+    /* Style northward tooltips specifically */
+    .d3-tip.n:after {
+      margin: -2px 0 0 0;
+      top: 100%;
+      left: 0;
+    }
+</style>
+
+<!-- body -->
+
+
+<div id="wrapper">
+	<p>In the midst of a serious statewide labor shortage, Mainers who have full-time jobs are wasting thousands of potentially productive hours every day in long, unpaid commutes, according to estimates from the U.S. Census Bureau.</p>
+
+	<p>All told, Maine workers spend about 400,000 hours a day chauffering themselves to and from their jobs. But that lost labor is by no means evenly distributed across the state: workers in poorer, more rural areas typically lose more time to commuting, while wealther coastal regions lose less:</p>
+
+	<div id="mapBox" class="sticky" style="max-width: 998px;">
+		
+		<div id="svgNav">
+			<h3>Search by town name</h3>
+			<div id="mapSearch">
+				<div class="ui-widget"><input autocomplete="off" class="ui-autocomplete-input" id="tags" value="find your town"></div>
+			</div>
+			<div id="svgClick"></div>
+		</div>
+
+		<div id="svgMap"></div>
+		
+	</div>
+
+	<div class="chatterbox"><h2 id="wages_Portland">Average commute times in southern Maine</h2><p>In southern Maine, where the majority of jobs are concentrated in Portland and its close-in suburbs, each town's average commuting time is typically proportional to its distance from the coast. </p></div>
+
+	<div class="chatterbox"><h2 id="commutes_Portland">&nbsp;</h2><p>Outside of the City of Portland proper, where a large number of lower-wage workers live close to their jobs, workers in towns with long commutes typically also earn lower wages. </p></div>
+
+	<div class="chatterbox"><h2 id="nondrivers">Commuting alternatives</h2>
+		<p>While driving alone is the predominant means of getting to work for workers across most of the state, many Mainers do manage to avoid commuting labor by walking, biking, riding a bus or working from home. </p>
+
+		<p>Of course, those alternatives are available in some towns more than others: in Portland, Bangor, and in college towns like Farmington, Waterville and Orono, workers have access to public transit, and there are more job opportunities within walking distance of their homes. But in most rural areas, job opportunities are more far-flung, and transit options are virtually nonexistent.</p> 
+	</div>
+
+	<div class="chatterbox"><h2 id="cumulativeloss">Cumulative wage losses from commutes</h2>
+		<p> This view of the map multiplies each town's proportion of workers who drive themselves to work* by their average commuting time (in hours) and their average hourly earnings to calculate the gross cost of the average worker's commute for each town.</p>
+
+		<p>*Note: this figure does not include commuting labor from carpoolers, who still drive themselves to work (albeit less often than workers who drive alone).</p> 
+  </div>
+
+
+	<div id="iaAnno" style="margin-bottom: 800px;">
+		<div><span class='bcBold'>SOURCE:</span> <span id='iaSource'>U.S. Census Bureau, American Community Survey estimates</span></div>
+		<div><span class='bcBold'>INTERACTIVE:</span> <span id='iaSource'>Christian MilNeil | <a href="http://twitter.com/c_milneil" target="_blank">@c_milneil</a></span></div>
+	</div>
+
+</div>
