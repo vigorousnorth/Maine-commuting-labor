@@ -20,11 +20,11 @@ svg {position: relative; z-index:10; display: block;
   font-family: "Open Sans", sans-serif; font-size: 10px;
 }
 
-div#wrapper {max-width: 698px;}
+div#wrapper {max-width: 698px; font-family: "Open Sans", sans-serif; font-size: 12px; }
 
 div.chatterbox { 
   position: relative;
-  padding: 2em 0; width: 90%; 
+  padding: 2em; width: 98%; 
   margin-left: 5%; margin-bottom: 100em; margin-top: 14em;
   background-color: rgba(255,255,255,0.9);
   z-index: 1000;
