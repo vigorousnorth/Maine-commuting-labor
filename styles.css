@@ -20,7 +20,7 @@ svg {position: relative; z-index:10; display: block;
   font-family: "Open Sans", sans-serif; font-size: 10px;
 }
 
-div#wrapper {max-width: 698px; font-family: "Open Sans", sans-serif; font-size: 12px; }
+div#wrapper {max-width: 698px; font-family: "Open Sans", sans-serif; font-size: 14px; }
 
 div.chatterbox { 
   position: relative;
