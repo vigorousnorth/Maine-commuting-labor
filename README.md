@@ -1,4 +1,4 @@
-#Commuting labor in Maine
+# Commuting labor in Maine
 
 In the midst of a serious statewide labor shortage, Mainers who have full-time jobs are wasting thousands of potentially productive hours every day in long, unpaid commutes, according to estimates from the U.S. Census Bureau.
 
